@@ -1,3 +1,7 @@
+[tool.nitpick]
+style = "styles/nitpick-style-wemake.toml"
+
+
 [tool.poetry]
 name = "itmo-2019"
 version = "0.1.0"
