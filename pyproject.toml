@@ -1,5 +1,5 @@
 [tool.poetry]
-name = "itmo-2019"
+name = "itmo"
 version = "0.1.0"
 description = ""
 authors = ["sobolevn <mail@sobolevn.me>"]
@@ -7,6 +7,7 @@ license = "MIT"
 
 [tool.poetry.dependencies]
 python = "^3.7"
+requests = "^2.22"
 
 [tool.poetry.dev-dependencies]
 wemake-python-styleguide = "^0.12.4"

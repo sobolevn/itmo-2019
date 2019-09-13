@@ -200,3 +200,5 @@ fabric.properties
 # Used for testing:
 ex.py
 .vscode/
+temp/*
+!temp/.gitkeep
