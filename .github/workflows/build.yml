@@ -15,8 +15,7 @@ jobs:
         python-version: 3.7
     - name: Install dependencies
       run: |
-        curl -sSL https://raw.githubusercontent.com/sdispater/poetry/master/get-poetry.py | python
-        source $HOME/.poetry/env
+        pip install poetry
         poetry install
     - name: Lint with flake8
       run: |
