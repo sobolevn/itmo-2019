@@ -10,5 +10,5 @@ for homework_folder1 in $(find students/* -maxdepth 1 -name 1); do
 done
 
 for runtests in $(find students/*/1 -maxdepth 1 -name 'runtests.py'); do
-  python "$runtests"
+  poetry run python "$runtests"
 done
