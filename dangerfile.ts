@@ -21,10 +21,16 @@ const importantFiles = [
   '.github/pull_request_template',
 
   'dangerfile.ts',
-  'LICENSE',
   'Makefile',
   'pyproject.toml',
   'setup.cfg',
+  '.gitignore',
+  '.editorconfig',
+
+  'LICENSE',
+  'README.md',
+  'CONTRIBUTING.md',
+  'CODE_OF_CONDUCT.md',
 ]
 
 const changedFiles = [
