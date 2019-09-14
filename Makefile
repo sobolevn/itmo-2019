@@ -2,7 +2,7 @@ SHELL:=/usr/bin/env bash
 
 .PHONY: lint
 lint:
-	flake8 .
+	poetry run flake8 .
 
 .PHONY: unit
 unit:
