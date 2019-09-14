@@ -1,18 +1,19 @@
 import { message, fail, danger } from 'danger'
 
 // Critical:
-console.log(JSON.stringify(danger.github))
-console.log(JSON.stringify(danger.github.base))
-console.log(JSON.stringify(danger.github.head))
+console.log(JSON.stringify(danger.git))
+console.log(danger.github.pr.user.login)
 
-message(JSON.stringify(danger.github))
-message(JSON.stringify(danger.github.base))
-message(JSON.stringify(danger.github.head))
-
-if (danger.github.base.ref !== 'master') {
+if (danger.github.pr.base.ref !== 'master') {
   fail('We only accept PRs to `master` branch.')
 }
 
-if (danger.github.head.ref.match(/homework-\d+/)) {
+if (!danger.github.pr.head.ref.match(/homework-\d+/)) {
   fail('Your branch should be named `homework-${HOMEWORK_NUMBER}`.')
 }
+
+if (!danger.github.pr.mergeable) {
+  fail('Looks like your PR cannot be merged, please fix it: reopen or rebase.')
+}
+
+// Warnings:
