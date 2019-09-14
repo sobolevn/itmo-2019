@@ -1,9 +1,6 @@
-import { message, fail, danger } from 'danger'
+import { danger, fail, warn } from 'danger'
 
 // Critical:
-console.log(JSON.stringify(danger.git))
-console.log(danger.github.pr.user.login)
-
 if (danger.github.pr.base.ref !== 'master') {
   fail('We only accept PRs to `master` branch.')
 }
@@ -17,3 +14,31 @@ if (!danger.github.pr.mergeable) {
 }
 
 // Warnings:
+const importantFiles = [
+  '.github/workflows/build.yml',
+  '.github/workflows/review.yml',
+  '.github/CODEOWNERS',
+  '.github/pull_request_template',
+
+  'dangerfile.ts',
+  'LICENSE',
+  'Makefile',
+  'pyproject.toml',
+  'setup.cfg',
+]
+
+const changedFiles = [
+  ...danger.git.modified_files,
+  ...danger.git.created_files,
+  ...danger.git.deleted_files,
+]
+
+for (const changedFile of changedFiles) {
+  if (!changedFile.startsWith(`students/${danger.github.pr.user.login}`)) {
+    warn(`File change outside the workdir: ${changedFile}`)
+  }
+
+  if (importantFiles.includes(changedFile)) {
+    warn(`Changed an important file: ${changedFile}`)
+  }
+}
