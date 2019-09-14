@@ -1,5 +1,6 @@
 # itmo-2019
 
+[![Github Actions CI](https://github.com/sobolevn/itmo-2019/workflows/build/badge.svg)](https://github.com/sobolevn/itmo-2019/actions)
 [![Gitter](https://badges.gitter.im/itmo-2019/community.svg)](https://gitter.im/itmo-2019/community)
 
 This package contains all the source code and lecture files.
