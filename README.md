@@ -29,11 +29,15 @@ There are a lot of tricky parts and manual labour, which we are mastering.
 
 ### Process
 
-1. [Create a Pull Request](https://help.github.com/en/desktop/contributing-to-projects/creating-a-pull-request) with files under `students/${YOUR_GTIHUB_ACCOUNT}/${HOMEWORK_NUMBER}`. Do not touch anything else
-2. Make sure that [CI works](https://github.blog/2019-08-08-github-actions-now-supports-ci-cd/)
-3. Pass a [code review](https://github.com/features/code-review/)
-4. Send a link to [`gitter`](https://gitter.im/itmo-2019/community) before the deadline
-5. Done!
+1. [Create a custom fork](https://help.github.com/en/articles/fork-a-repo) to work locally
+2. Name your branch as `homework-${HOMEWORK_NUMBER}` where `${HOMEWORK_NUMBER}` is `1`, `2`, `3`, `4`, ...
+3. [Create a Pull Request](https://help.github.com/en/desktop/contributing-to-projects/creating-a-pull-request) with files under `students/${YOUR_GTIHUB_ACCOUNT}/${HOMEWORK_NUMBER}`. Do not touch anything else
+4. Use the correct [Pull Request template](https://github.com/sobolevn/itmo-2019/blob/master/.github/pull_request_template.md) (it should be suggested automatically by GitHub)
+5. Make sure that [all checkboxes are checked](https://github.com/stilliard/github-task-list-completed) in the Pull Request template
+4. Make sure that [CI works](https://github.blog/2019-08-08-github-actions-now-supports-ci-cd/)
+5. Pass a [code review](https://github.com/features/code-review/)
+6. Send a link to [`gitter`](https://gitter.im/itmo-2019/community) before the deadline
+7. Done!
 
 ### Deadline
 
