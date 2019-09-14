@@ -6,7 +6,7 @@ lint:
 
 .PHONY: unit
 unit:
-	echo "unit: not yet"
+	@echo "unit: not yet"
 
 .PHONY: package
 package:
