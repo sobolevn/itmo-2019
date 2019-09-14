@@ -1,6 +1,6 @@
 # itmo-2019
 
-[![Build Status](https://travis-ci.org/sobolevn/itmo-2019.svg?branch=master)](https://travis-ci.org/sobolevn/itmo-2019)
+[![Build Status](https://travis-ci.com/sobolevn/itmo-2019.svg?branch=master)](https://travis-ci.com/sobolevn/itmo-2019)
 [![Gitter](https://badges.gitter.im/itmo-2019/community.svg)](https://gitter.im/itmo-2019/community)
 
 This package contains all the source code and lecture files.
