@@ -1,4 +1,4 @@
-name: comments
+name: danger
 
 on: [pull_request]
 
