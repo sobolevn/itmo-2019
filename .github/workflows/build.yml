@@ -19,3 +19,5 @@ jobs:
         poetry install
     - name: Make test
       run: make test
+    - name: First Homework
+      run: sh 'bin/homework1.sh'

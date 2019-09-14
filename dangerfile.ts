@@ -9,7 +9,7 @@ if (!danger.github.pr.head.ref.match(/homework-\d+/)) {
   fail('Your branch should be named `homework-${HOMEWORK_NUMBER}`.')
 }
 
-if (!danger.github.pr.mergeable) {
+if (!danger.github.pr.rebaseable) {
   fail('Looks like your PR cannot be merged, please fix it: reopen or rebase.')
 }
 
