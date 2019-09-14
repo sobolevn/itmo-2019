@@ -1,15 +1,15 @@
 name: comments
 
-on: [issue_comment]
+on: [pull_request]
 
 jobs:
-  rebase:
+  danger:
 
     runs-on: ubuntu-latest
 
     steps:
     - uses: actions/checkout@master
-    - name: Automatic Rebase
-      uses: cirrus-actions/rebase@master
+    - name: Danger JS Action
+      uses: danger/danger-js@9.1.8
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
