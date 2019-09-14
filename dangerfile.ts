@@ -13,6 +13,10 @@ if (!danger.github.pr.mergeable) {
   fail('Looks like your PR cannot be merged, please fix it: reopen or rebase.')
 }
 
+if (!danger.github.pr.body || danger.github.pr.body.length < 100) {
+  fail('The description of this PR is wrong, please fill it. Use PR template.')
+}
+
 // Warnings:
 const importantFiles = [
   '.github/workflows/build.yml',
