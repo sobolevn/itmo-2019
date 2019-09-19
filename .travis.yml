@@ -16,7 +16,7 @@ jobs:
 
     # Linting danger, code duplicates, and markdown:
     - language: node_js
-      node: 10.16
+      node_js: 10.16
       install: npm install
       script:
         - npm run test
