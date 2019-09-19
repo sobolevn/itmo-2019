@@ -18,9 +18,7 @@ jobs:
     - language: node_js
       node_js: 10.16
       install: npm install
-      script:
-        - npm run test
-        - npm run danger
+      script: npm run test
 
 notifications:
   email:
