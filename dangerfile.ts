@@ -1,6 +1,15 @@
+/**
+ * Dangerfile to run before the real code review.
+ *
+ * @see https://github.com/danger/danger-js
+ * @see https://danger.systems/js/
+ */
+
 import { danger, fail, warn } from 'danger'
 
-// Critical:
+// Critical
+// ========
+
 if (danger.github.pr.base.ref !== 'master') {
   fail('We only accept PRs to `master` branch.')
 }
@@ -9,27 +18,30 @@ if (!danger.github.pr.head.ref.match(/homework-\d+/)) {
   fail('Your branch should be named `homework-${HOMEWORK_NUMBER}`.')
 }
 
-if (!danger.github.pr.rebaseable) {
-  fail('Looks like your PR cannot be merged, please fix it: reopen or rebase.')
-}
-
 if (!danger.github.pr.body || danger.github.pr.body.length < 100) {
   fail('The description of this PR is wrong, please fill it. Use PR template.')
 }
 
-// Warnings:
+// Warnings
+// ========
+
 const importantFiles = [
   '.github/workflows/build.yml',
   '.github/workflows/review.yml',
   '.github/CODEOWNERS',
   '.github/pull_request_template',
 
-  'dangerfile.ts',
+  '.gitignore',
+  '.editorconfig',
+  '.travis.yml',
+
   'Makefile',
   'pyproject.toml',
   'setup.cfg',
-  '.gitignore',
-  '.editorconfig',
+
+  'dangerfile.ts',
+  'package.json',
+  'package-lock.json',
 
   'LICENSE',
   'README.md',

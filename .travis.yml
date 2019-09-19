@@ -1,17 +1,26 @@
 dist: xenial
-language: python
-python: 3.7
 
-before_install:
-  - pip freeze | xargs pip uninstall -y
-  - curl -sSL https://raw.githubusercontent.com/sdispater/poetry/master/get-poetry.py | python
-  - source "$HOME/.poetry/env"
+jobs:
+  include:
+    # Python code quality:
+    - language: python
+      python: 3.7
+      before_install:
+        - pip freeze | xargs pip uninstall -y
+        - curl -sSL https://raw.githubusercontent.com/sdispater/poetry/master/get-poetry.py | python
+        - source "$HOME/.poetry/env"
+      install: poetry install
+      script:
+        - make test
+        - sh 'bin/homework1.sh'
 
-install: poetry install
-
-script:
-  - make test
-  - sh 'bin/homework1.sh'
+    # Linting danger, code duplicates, and markdown:
+    - language: node_js
+      node: 10.16
+      install: npm install
+      script:
+        - npm run test
+        - npm run danger
 
 notifications:
   email:

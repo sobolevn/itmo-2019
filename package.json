@@ -1,0 +1,42 @@
+{
+  "name": "itmo-2019",
+  "version": "0.0.0",
+  "description": "Repository for my lectures about quality for ITMO",
+  "main": "false",
+  "engines": {
+    "node": "10.16",
+    "npm": ">=6"
+  },
+  "scripts": {
+    "lint:md": "remark -q -f .",
+    "lint:dup": "jscpd -g --threshold=1 students",
+    "test": "npm run lint:md && npm run lint:dup"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sobolevn/itmo-2019.git"
+  },
+  "author": "mail@sobolevn.me",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/sobolevn/itmo-2019/issues"
+  },
+  "homepage": "https://github.com/sobolevn/itmo-2019#readme",
+  "remarkConfig": {
+    "plugins": [
+      "remark-preset-lint-recommended",
+      "remark-preset-lint-consistent",
+      [
+        "remark-lint-list-item-indent",
+        "space"
+      ]
+    ]
+  },
+  "devDependencies": {
+    "jscpd": "^2.0.15",
+    "remark-cli": "^7.0.0",
+    "remark-lint": "^6.0.5",
+    "remark-preset-lint-consistent": "^2.0.3",
+    "remark-preset-lint-recommended": "^3.0.3"
+  }
+}
