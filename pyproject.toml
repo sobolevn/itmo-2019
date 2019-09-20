@@ -10,7 +10,7 @@ python = "^3.7"
 requests = "^2.22"
 
 [tool.poetry.dev-dependencies]
-wemake-python-styleguide = "^0.12.4"
+wemake-python-styleguide = "^0.12.5"
 safety = "^1.8"
 pytest = "^5.1"
 pytest-randomly = "^3.1"
