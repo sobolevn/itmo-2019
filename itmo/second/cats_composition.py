@@ -6,6 +6,7 @@ from itmo.second.cats_direct import (
     fetch_cat_fact,
     fetch_cat_image,
     save_cat,
+    one_more_name,
 )
 
 
