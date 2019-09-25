@@ -33,7 +33,7 @@
     ]
   },
   "devDependencies": {
-    "jscpd": "^2.0.15",
+    "jscpd": "^2.0.16",
     "remark-cli": "^7.0.0",
     "remark-lint": "^6.0.5",
     "remark-preset-lint-consistent": "^2.0.3",
