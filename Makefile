@@ -6,7 +6,7 @@ lint:
 
 .PHONY: unit
 unit:
-	poetry run pytest
+	poetry run sh bin/test.sh
 
 .PHONY: package
 package:

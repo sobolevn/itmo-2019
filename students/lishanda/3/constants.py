@@ -11,7 +11,7 @@ DIRSTR = 'dir'
 TXTSTR = ''
 
 
-@pytest.fixture
+@pytest.fixture()
 def earlier_than_now_timestamp():
     """Timestamp."""
     from datetime import datetime  # noqa WPS433
