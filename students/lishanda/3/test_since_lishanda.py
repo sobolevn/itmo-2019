@@ -2,14 +2,7 @@
 
 
 from cli import since
-from constants import (
-    DIRSTR,
-    INV_ARG,
-    M_NUMBER,
-    TXT_FILENAME,
-    TXTSTR,
-    mkdir,
-)
+from constants import DIRSTR, INV_ARG, M_NUMBER, TXT_FILENAME, TXTSTR, mkdir
 
 
 def test_since_not_existing_dir(tmp_path):
