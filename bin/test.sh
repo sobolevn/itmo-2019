@@ -7,8 +7,9 @@ pyclean () {
   find . | grep -E "(__pycache__|\.py[cod]$)" | xargs rm -rf
 }
 
-for dir in $(find students -type d -mindepth 1 -maxdepth 1); do
+for dir in $(find students -mindepth 1 -maxdepth 1 -type d); do
   echo "Running tests for: $dir"
   pytest "$dir"
   pyclean
+  echo
 done

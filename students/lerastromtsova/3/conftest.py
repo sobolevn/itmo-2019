@@ -5,8 +5,26 @@ import shutil
 
 import pytest
 
-from setups import mk_dir, setup_ls, setup_mk, setup_rm, setup_contains, setup_since  # noqa: E501, I001
-from constants import does_not_raise, TEST_DIR, FOLDERS, FILES, FOLDER, FILE, SCOPE, FILE_NOT_FOUND, FILE_EXISTS, TEST_DATE  # noqa: E501, I001
+from constants import (
+    FILE,
+    FILE_EXISTS,
+    FILE_NOT_FOUND,
+    FILES,
+    FOLDER,
+    FOLDERS,
+    SCOPE,
+    TEST_DATE,
+    TEST_DIR,
+    does_not_raise,
+)
+from setups import (
+    mk_dir,
+    setup_contains,
+    setup_ls,
+    setup_mk,
+    setup_rm,
+    setup_since,
+)
 
 
 @pytest.fixture(scope=SCOPE, params=[
@@ -42,6 +60,7 @@ def fixture_mk(request):
     mk_dir(TEST_DIR)
     setup_mk(request.param)
     yield request.param
+    teardown()
 
 
 @pytest.fixture(scope=SCOPE, params=[
@@ -54,6 +73,7 @@ def fixture_rm(request):
     mk_dir(TEST_DIR)
     setup_rm(request.param)
     yield request.param
+    teardown()
 
 
 @pytest.fixture(scope=SCOPE, params=[
@@ -66,6 +86,7 @@ def fixture_contains(request):
     mk_dir(TEST_DIR)
     setup_contains(request.param)
     yield request.param
+    teardown()
 
 
 @pytest.fixture(scope=SCOPE, params=[
@@ -105,6 +126,7 @@ def fixture_since(request):
     mk_dir(TEST_DIR)
     setup_since(request.param)
     yield request.param
+    teardown()
 
 
 @pytest.fixture(scope=SCOPE, params=[

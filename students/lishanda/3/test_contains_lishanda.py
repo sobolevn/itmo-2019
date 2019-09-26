@@ -1,9 +1,8 @@
 # -*- coding: utf-8 -*-
 
-import pytest  # noqa I003
-from constants import M_NUMBER, TXT_FILENAME, INV_ARG, PYSTR, CLISTR  # noqa I001
-from constants import DIRSTR, TXTSTR, earlier_than_now_timestamp, mkdir  # noqa F401, I001
+
 from cli import contains, mk, rm
+from constants import DIRSTR, INV_ARG, TXT_FILENAME, mkdir
 
 
 def test_contains_no_filename():

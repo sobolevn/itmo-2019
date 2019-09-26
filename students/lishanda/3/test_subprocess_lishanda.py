@@ -1,10 +1,8 @@
 # -*- coding: utf-8 -*-
 
-import pytest  # noqa I003
-import subprocess  # noqa S404
-from constants import M_NUMBER, TXT_FILENAME, INV_ARG, PYSTR, CLISTR  # noqa I001
+import subprocess
 
-from constants import DIRSTR, TXTSTR, earlier_than_now_timestamp, mkdir  # noqa F401, I001
+from constants import CLISTR, PYSTR, TXT_FILENAME
 
 
 def test_ls_integration():

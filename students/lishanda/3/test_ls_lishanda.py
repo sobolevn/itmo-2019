@@ -1,8 +1,8 @@
 # -*- coding: utf-8 -*-
 
-import pytest  # noqa I003
-from constants import TXT_FILENAME, PYSTR, CLISTR, TXTSTR, mkdir  # noqa I001
-from cli import ls  # noqa I003
+
+from cli import ls
+from constants import TXT_FILENAME, TXTSTR, mkdir
 
 
 def test_ls_empty_dir(tmp_path):

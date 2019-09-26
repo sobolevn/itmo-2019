@@ -1,9 +1,8 @@
 # -*- coding: utf-8 -*-
 
-import pytest  # noqa I003
-from constants import M_NUMBER, TXT_FILENAME, INV_ARG, PYSTR, CLISTR  # noqa I001
-from constants import DIRSTR, TXTSTR, earlier_than_now_timestamp, mkdir  # noqa F401, I001
+
 from cli import mk
+from constants import INV_ARG, TXT_FILENAME, TXTSTR
 
 
 def test_mk_no_filename():

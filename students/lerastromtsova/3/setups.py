@@ -2,7 +2,15 @@
 
 import os
 
-from constants import FORMAT_CONSTANT, FOLDERS, FILES, FILE_NOT_FOUND, FILE_EXISTS, FILE, FOLDER  # noqa: E501, I001
+from constants import (
+    FILE,
+    FILE_EXISTS,
+    FILE_NOT_FOUND,
+    FILES,
+    FOLDER,
+    FOLDERS,
+    FORMAT_CONSTANT,
+)
 
 
 def mk_dir(dirname):

@@ -8,7 +8,7 @@ import pytest
 TEST_DIR = 'test_dirs'
 FORMAT_CONSTANT = '{0}/{1}'
 
-SCOPE = 'module'
+SCOPE = 'function'
 FOLDER = 'folder'
 FILE = 'file'
 

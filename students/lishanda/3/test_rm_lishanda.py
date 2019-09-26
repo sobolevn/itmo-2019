@@ -1,9 +1,8 @@
 # -*- coding: utf-8 -*-
 
-import pytest  # noqa I003
-from constants import M_NUMBER, TXT_FILENAME, INV_ARG, PYSTR, CLISTR  # noqa I001
-from constants import DIRSTR, TXTSTR, earlier_than_now_timestamp, mkdir  # noqa F401, I001
+
 from cli import rm
+from constants import DIRSTR, INV_ARG, TXT_FILENAME, TXTSTR, mkdir
 
 
 def test_rm_success(tmp_path):
@@ -16,7 +15,7 @@ def test_rm_success(tmp_path):
 def test_rm_dir(tmp_path):
     """Test rm_dir."""
     directory = tmp_path / DIRSTR
-    mkdir(directory)  # noqa WPS204
+    mkdir(directory)
     assert rm(directory) == 'argument is dir'
 
 
