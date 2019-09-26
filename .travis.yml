@@ -12,7 +12,6 @@ jobs:
       install: poetry install
       script:
         - make test
-        - sh 'bin/homework1.sh'
 
     # Linting danger, code duplicates, and markdown:
     - language: node_js
