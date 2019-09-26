@@ -203,3 +203,4 @@ ex.py
 temp/*
 !temp/.gitkeep
 .jscpd/
+*.txt
