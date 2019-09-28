@@ -9,6 +9,7 @@ pyclean () {
 
 for dir in $(find students -mindepth 1 -maxdepth 1 -type d); do
   echo "Running tests for: $dir"
+  pyclean
   pytest "$dir"
   pyclean
   echo

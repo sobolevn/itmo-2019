@@ -2,6 +2,7 @@
 
 import unittest
 
+import pytest
 from urllib3.response import HTTPResponse
 
 from itmo.second.cats_direct import (
@@ -21,6 +22,7 @@ class TestCatsDirect(unittest.TestCase):
         parse_result = create_parser().parse_args(test_args)
         self.assertEqual(parse_result.count, int(test_args[1]))
 
+    @pytest.mark.xfail
     def test_fetch_cat_fact(self):
         """Test fatch cat fact."""
         try:
@@ -31,6 +33,7 @@ class TestCatsDirect(unittest.TestCase):
         self.assertIsInstance(cats_fact, str)
         self.assertGreater(len(cats_fact), 0)
 
+    @pytest.mark.xfail
     def test_fetch_cat_image(self):
         """Test fatch cat image."""
         image_formats = ['jpg', 'jpeg', 'gif', 'png']
